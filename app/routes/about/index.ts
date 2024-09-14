@@ -10,3 +10,5 @@ app.get("/:name", (c) => {
         "your name is": name,
     })
 })
+
+export default app;
