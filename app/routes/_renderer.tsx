@@ -1,7 +1,7 @@
-import { jsxRenderer } from "hono/jsx-renderer"
+import { reactRenderer } from "@hono/react-renderer"
 import { HasIslands } from "honox/server"
 
-export default jsxRenderer(({children}) => {
+export default reactRenderer(({children, title}) => {
   return (
     <html lang="ja">
       <head>
@@ -14,6 +14,7 @@ export default jsxRenderer(({children}) => {
         ) : (
           <script type="module" src="/app/client.ts" />
         )}
+        {title ? <title>{title}</title>: ""}
       </head>
       <body>
         {children}
