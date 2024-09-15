@@ -1,5 +1,11 @@
-import type { Context } from "hono/jsx";
+import { createRoute } from "honox/factory"
+import Counter from "../islands/counter";
 
-export default function Home(_c: Context<unknown>) {
-  return <h1>Welcome!</h1>
-}
+export default createRoute((c) => {
+  return c.render(
+    <div>
+      <h1>Hello</h1>
+      <Counter />
+    </div>
+  );
+});
