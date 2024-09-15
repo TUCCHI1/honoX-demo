@@ -5,7 +5,7 @@ createClient({
 		const { hydrateRoot } = await import("react-dom/client");
 		hydrateRoot(root, elem);
 	},
-	createElement: async (type: any, props: any) => {
+	createElement: async (type, props) => {
 		const { createElement } = await import("react");
 		return createElement(type, props);
 	},
