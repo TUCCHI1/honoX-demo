@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "strict": true,
-    "skipLibCheck": true,
+    "target": "ESNext", // コンパイル後のバージョン
+    "module": "ESNext", // モジュールのバージョン 
+    "moduleResolution": "Bundler", // モジュールの解決方法
+    "strict": true, 
+    "skipLibCheck": true, // d.tsファイルの型チェックをスキップ
     "lib": [
       "ESNext",
       "DOM"
-    ],
+    ], // コンパイル時に使用するライブラリ
     "types": [
       "vite/client",
       "@cloudflare/workers-types/2023-07-01"
     ],
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
+    "jsx": "react-jsx", // JSXのバージョン https://www.typescriptlang.org/tsconfig#jsx
+    "jsxImportSource": "react" // JSXのimport元
   },
   "include": [
     "**/*.ts",
